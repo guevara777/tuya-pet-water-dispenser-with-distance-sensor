@@ -3,6 +3,8 @@ I upgraded my Tuya Pet Water Dispenser with an ESP32 and a Distance Sensor to au
 
 
 ![PXL_20221017_202828599](https://user-images.githubusercontent.com/29648553/196281586-7b63e71f-6aa1-4c22-a911-5c76376d48aa.jpg)
+![PXL_20221017_202726788](https://user-images.githubusercontent.com/29648553/196287968-8e95c204-f961-400f-adad-2f55c26735d6.jpg)
+
 https://youtube.com/shorts/7VWicCwxIYM?feature=share
 
 ## What is this?
