@@ -13,10 +13,10 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "b5rX0uzbfI82SqcBZSdhBsKRIt/eZUybRTZZTijSB+A="
+    key: "<Home Assistant Encryption Key>"
 
 ota:
-  password: "3281669cf74e574c31adc5b899ad7c53"
+  password: "<OTA Password>"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -25,7 +25,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Wasserstation-Wohnzimmer"
-    password: "cBuSLlgttOzp"
+    password: "<WiFi Password>"
 
 captive_portal:
 
@@ -54,7 +54,7 @@ binary_sensor:
     device_class: occupancy
     filters:
       - delayed_off: 30s
-    # Tier erkennen wenn Abstand weniger als 90 cm
+    # Detect Objects 90 cm or less in front of the sensor
     lambda: |-
       if (id(tierdistance).state < 0.9) {
         // Tier vor der Station
