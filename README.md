@@ -24,7 +24,7 @@ Now the pump will start as soon as there is an object (e.g. a pet) nearer than 9
 ## Hardware-Setup
 All the needed hardware fits perfectly in the space between the water tank an the bottom of the case. I had to drill 3 holes in the case (2 for the ultrasonic sensor, 1 for the second power supply for the pump).
 ![PXL_20221017_202921697](https://user-images.githubusercontent.com/29648553/196281986-8dee2d7d-365a-4120-aad1-b20a5cae323d.jpg)
-
+![Folie1](https://user-images.githubusercontent.com/29648553/196286765-be07d57a-5710-4a12-bfcf-3e49733f4f33.PNG)
 
 ## Software-Setup
 
