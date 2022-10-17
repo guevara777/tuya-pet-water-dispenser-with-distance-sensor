@@ -1,9 +1,9 @@
 # Tuya Pet Water Dispenser with Distance Sensor
 I upgraded my Tuya Pet Water Dispenser with an ESP32 and a Distance Sensor to automaticly start the pump if a pet is in front of the dispenser and stop the pump as soon as there is not pet in front of the dispenser for 30 seconds.
 
+
 ![PXL_20221017_202828599](https://user-images.githubusercontent.com/29648553/196281586-7b63e71f-6aa1-4c22-a911-5c76376d48aa.jpg)
-
-
+https://youtube.com/shorts/7VWicCwxIYM?feature=share
 
 ## What is this?
 I took my Tuya Pet Water Dispenser and replaced the orginal Board inside with an ESP32 and also added a distance sensor and a relay the start / stop the pump.
