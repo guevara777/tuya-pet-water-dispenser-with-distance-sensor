@@ -1,0 +1,77 @@
+esphome:
+  name: "esp-wasserstation-wohnzimmer"
+  comment: "Tierbrunnen-Annäherungs-Sensor Wohnzimmer"
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b5rX0uzbfI82SqcBZSdhBsKRIt/eZUybRTZZTijSB+A="
+
+ota:
+  password: "3281669cf74e574c31adc5b899ad7c53"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Wasserstation-Wohnzimmer"
+    password: "cBuSLlgttOzp"
+
+captive_portal:
+
+#web_server:
+#  local: true
+
+button:
+  - platform: restart
+    id: restartbutton
+    name: "Restart"
+    entity_category: "config"
+
+sensor:
+  - platform: ultrasonic
+    id: tierdistance
+    trigger_pin: GPIO25
+    echo_pin: GPIO26
+    name: "Ultraschall-Sensor"
+    update_interval: 1s
+    timeout: 2m
+
+binary_sensor:
+  - platform: template
+    id: tiervorstation
+    name: Tier vor Station
+    device_class: occupancy
+    filters:
+      - delayed_off: 30s
+    # Tier erkennen wenn Abstand weniger als 90 cm
+    lambda: |-
+      if (id(tierdistance).state < 0.9) {
+        // Tier vor der Station
+        return true;
+      } else {
+        // kein Tier vor der Station
+        return false;
+      }
+    on_press:
+      then:
+        - switch.turn_on: pumpe
+    on_release:
+      then:
+        - switch.turn_off: pumpe
+
+switch:
+  - platform: gpio
+    id: pumpe
+    name: "Pumpe"
+    pin: GPIO27
