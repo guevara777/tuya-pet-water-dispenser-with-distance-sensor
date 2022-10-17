@@ -30,4 +30,4 @@ All the needed hardware fits perfectly in the space between the water tank an th
 
 
 ### ESPHOME
-See [ESPhome-Yaml-Code](https://github.com/guevara777/smart_raised_garden_bed_irrigation/blob/main/esphome_code.yaml) for Water-Level-Sensor 
+See [ESPhome-Yaml-Code](https://github.com/guevara777/xiaomi-pet-water-dispenser-with-distance-sensor/blob/main/esphome-pet-water-dispenser-with-distance-sensor.yaml)
